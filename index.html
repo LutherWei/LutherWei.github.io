@@ -50,7 +50,7 @@
     .theme-btn:hover { border-color:var(--border-hi); color:var(--text); }
 
     /* ---------- HERO ---------- */
-    .hero { text-align:center; padding:110px 0 90px; }
+    .hero { text-align:center; padding:110px 0 30px; }
     .hero .eyebrow { color:var(--accent); font-weight:700; font-size:.9rem; letter-spacing:2px;
       text-transform:uppercase; }
     .hero h1 { font-size:clamp(3rem,11vw,6rem); font-weight:800; letter-spacing:-3px; line-height:.95;
@@ -61,7 +61,9 @@
     .hero .lead { font-size:clamp(1.3rem,3.2vw,1.9rem); color:var(--text); font-weight:600;
       max-width:640px; margin:34px auto 0; letter-spacing:-.5px; }
     .hero .meta { color:var(--text-dim); font-size:1rem; margin-top:20px; letter-spacing:.3px; }
-    /* honors timeline (its own section, newest first) */
+    /* honors timeline (its own section, newest first) — hugs the hero */
+    #honors { padding-top:0; }
+    #honors .head { margin-bottom:20px; }
     .honors-card { max-width:780px; margin:0 auto; }
     .honors-card .body { padding:14px 30px; }
     .honors { max-width:660px; margin:0 auto; text-align:left; }
@@ -256,9 +258,9 @@
       <div class="card honors-card">
         <div class="body">
           <div class="honors">
+            <div class="hh"><span class="hh-year">2026</span><span class="hh-text">🏅 NSTC Undergraduate Research Project（國科會大專生計畫）</span></div>
             <div class="hh"><span class="hh-year">2026</span><span class="hh-text">🥇×3 Taiwan Intercollegiate Games — Foil Individual &amp; Team, Sabre Team Champion</span></div>
             <div class="hh"><span class="hh-year">2026</span><span class="hh-text">🏆 TSMC IT CareerHack — Finalist</span></div>
-            <div class="hh"><span class="hh-year">2026</span><span class="hh-text">🏅 NSTC Undergraduate Research Project（國科會大專生計畫）</span></div>
             <div class="hh"><span class="hh-year">2025</span><span class="hh-text">🥇×3 Taiwan Intercollegiate Games — Foil Individual &amp; Team, Épée Team Champion</span></div>
             <div class="hh"><span class="hh-year">2025</span><span class="hh-text">🏆 TSMC IT CareerHack — 3rd Place</span></div>
             <div class="hh"><span class="hh-year">2024</span><span class="hh-text">🥇×2 Taiwan Intercollegiate Games — Foil Individual &amp; Team Champion</span></div>
