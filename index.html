@@ -61,8 +61,10 @@
     .hero .lead { font-size:clamp(1.3rem,3.2vw,1.9rem); color:var(--text); font-weight:600;
       max-width:640px; margin:34px auto 0; letter-spacing:-.5px; }
     .hero .meta { color:var(--text-dim); font-size:1rem; margin-top:20px; letter-spacing:.3px; }
-    /* honors timeline under the name */
-    .honors { max-width:620px; margin:48px auto 0; text-align:left; }
+    /* honors timeline (its own section, newest first) */
+    .honors-card { max-width:780px; margin:0 auto; }
+    .honors-card .body { padding:14px 30px; }
+    .honors { max-width:660px; margin:0 auto; text-align:left; }
     .honors .hh { display:flex; gap:20px; align-items:baseline; padding:11px 4px;
       border-bottom:1px solid var(--border); }
     .honors .hh:last-child { border-bottom:none; }
@@ -70,11 +72,11 @@
       letter-spacing:1px; flex:0 0 46px; }
     .honors .hh-text { color:var(--text-soft); font-size:.95rem; }
 
-    /* fixed section index in the right margin */
-    .sidenav { position:fixed; right:26px; top:50%; transform:translateY(-50%); z-index:5;
-      display:flex; flex-direction:column; gap:16px; }
-    .sidenav a { display:flex; align-items:center; gap:10px; color:var(--text-dim);
-      font-size:.76rem; font-weight:700; letter-spacing:.5px; transition:color .2s; }
+    /* fixed section index in the top-left corner */
+    .sidenav { position:fixed; left:28px; top:88px; z-index:5;
+      display:flex; flex-direction:column; gap:15px; }
+    .sidenav a { display:flex; align-items:center; gap:10px; color:var(--text-soft);
+      font-size:.82rem; font-weight:800; letter-spacing:.5px; transition:color .2s; }
     .sidenav a::before { content:""; width:7px; height:7px; border-radius:50%;
       background:currentColor; flex:0 0 auto; transition:transform .2s; }
     .sidenav a:hover { color:var(--text); }
@@ -223,6 +225,7 @@
   <!-- section index (right margin, hidden on narrow screens) -->
   <nav class="sidenav" aria-label="Section index">
     <a href="#home">Home</a>
+    <a href="#honors">Honors</a>
     <a href="#work">Work</a>
     <a href="#competitions">Competitions</a>
     <a href="#fencing">Fencing</a>
@@ -243,18 +246,28 @@
       <div class="zh">魏路德</div>
       <div class="lead">I build AI that works in the real world.</div>
       <div class="meta">LLM · Vision-Language Models &nbsp;|&nbsp; Former NTU Fencing Captain</div>
-
-      <!-- honors timeline -->
-      <div class="honors">
-        <div class="hh"><span class="hh-year">2022</span><span class="hh-text">🥇 TISF 1st Prize &amp; Young Scientist Award · ISEF Entry</span></div>
-        <div class="hh"><span class="hh-year">2024</span><span class="hh-text">🥇×2 Taiwan Intercollegiate Games — Foil Individual &amp; Team Champion</span></div>
-        <div class="hh"><span class="hh-year">2025</span><span class="hh-text">🏆 TSMC IT CareerHack — 3rd Place</span></div>
-        <div class="hh"><span class="hh-year">2025</span><span class="hh-text">🥇×3 Taiwan Intercollegiate Games — Foil Individual &amp; Team, Épée Team Champion</span></div>
-        <div class="hh"><span class="hh-year">2026</span><span class="hh-text">🏅 NSTC Undergraduate Research Project（國科會大專生計畫）</span></div>
-        <div class="hh"><span class="hh-year">2026</span><span class="hh-text">🏆 TSMC IT CareerHack — Finalist</span></div>
-        <div class="hh"><span class="hh-year">2026</span><span class="hh-text">🥇×3 Taiwan Intercollegiate Games — Foil Individual &amp; Team, Sabre Team Champion</span></div>
-      </div>
     </header>
+
+    <!-- ==================== HONORS TIMELINE ==================== -->
+    <section id="honors">
+      <div class="head">
+        <div class="eyebrow">Honors &amp; Awards</div>
+        <h2>What I've won.</h2>
+      </div>
+      <div class="card honors-card">
+        <div class="body">
+          <div class="honors">
+            <div class="hh"><span class="hh-year">2026</span><span class="hh-text">🥇×3 Taiwan Intercollegiate Games — Foil Individual &amp; Team, Sabre Team Champion</span></div>
+            <div class="hh"><span class="hh-year">2026</span><span class="hh-text">🏆 TSMC IT CareerHack — Finalist</span></div>
+            <div class="hh"><span class="hh-year">2026</span><span class="hh-text">🏅 NSTC Undergraduate Research Project（國科會大專生計畫）</span></div>
+            <div class="hh"><span class="hh-year">2025</span><span class="hh-text">🥇×3 Taiwan Intercollegiate Games — Foil Individual &amp; Team, Épée Team Champion</span></div>
+            <div class="hh"><span class="hh-year">2025</span><span class="hh-text">🏆 TSMC IT CareerHack — 3rd Place</span></div>
+            <div class="hh"><span class="hh-year">2024</span><span class="hh-text">🥇×2 Taiwan Intercollegiate Games — Foil Individual &amp; Team Champion</span></div>
+            <div class="hh"><span class="hh-year">2022</span><span class="hh-text">🥇 TISF 1st Prize &amp; Young Scientist Award · ISEF Entry</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ==================== WORK (research + fencing coach) ==================== -->
     <section id="work">
@@ -469,7 +482,7 @@
         spyLinks.forEach(l => l.classList.toggle('active', l.hash === '#' + en.target.id));
       }
     }), { rootMargin: '-40% 0px -55% 0px' });
-    ['home','work','competitions','fencing','contact'].forEach(id => {
+    ['home','honors','work','competitions','fencing','contact'].forEach(id => {
       const el = document.getElementById(id); if (el) spy.observe(el);
     });
 
