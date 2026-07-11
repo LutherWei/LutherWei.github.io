@@ -1,0 +1,43 @@
+<svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Visual token pruning">
+  <defs>
+    <linearGradient id="vlmbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1030"/>
+      <stop offset="1" stop-color="#1a2b6b"/>
+    </linearGradient>
+    <radialGradient id="vlmglow" cx="0.7" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#6d8bff" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#6d8bff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#vlmbg)"/>
+  <rect width="640" height="360" fill="url(#vlmglow)"/>
+
+  <!-- image split into a 4x4 patch grid -->
+  <g transform="translate(150 60)">
+    <rect x="0" y="0" width="240" height="240" rx="14" fill="#0e1440" stroke="#3a4ba0" stroke-width="1.5"/>
+    <!-- grid lines -->
+    <g stroke="#2c3a86" stroke-width="1.5">
+      <line x1="60" y1="0" x2="60" y2="240"/><line x1="120" y1="0" x2="120" y2="240"/><line x1="180" y1="0" x2="180" y2="240"/>
+      <line x1="0" y1="60" x2="240" y2="60"/><line x1="0" y1="120" x2="240" y2="120"/><line x1="0" y1="180" x2="240" y2="180"/>
+    </g>
+    <!-- kept (bright) patches -->
+    <rect x="66" y="6"  width="48" height="48" rx="6" fill="#6d8bff" opacity="0.9"/>
+    <rect x="126" y="66" width="48" height="48" rx="6" fill="#8aa2ff" opacity="0.95"/>
+    <rect x="6" y="126" width="48" height="48" rx="6" fill="#6d8bff" opacity="0.8"/>
+    <rect x="186" y="186" width="48" height="48" rx="6" fill="#8aa2ff" opacity="0.9"/>
+    <rect x="126" y="186" width="48" height="48" rx="6" fill="#6d8bff" opacity="0.7"/>
+    <!-- cross-subimage attention links -->
+    <g stroke="#aab8ff" stroke-width="2" opacity="0.85" fill="none">
+      <line x1="90" y1="30" x2="150" y2="90"/>
+      <line x1="150" y1="90" x2="30" y2="150"/>
+      <line x1="150" y1="90" x2="210" y2="210"/>
+      <line x1="210" y1="210" x2="150" y2="210"/>
+    </g>
+    <g fill="#dfe6ff">
+      <circle cx="90" cy="30" r="4"/><circle cx="150" cy="90" r="4"/>
+      <circle cx="30" cy="150" r="4"/><circle cx="210" cy="210" r="4"/><circle cx="150" cy="210" r="4"/>
+    </g>
+  </g>
+
+  <text x="40" y="330" fill="#9fb0ff" font-family="-apple-system,Segoe UI,sans-serif" font-size="20" font-weight="700" letter-spacing="1">TOKEN PRUNING · VLM</text>
+</svg>

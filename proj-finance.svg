@@ -1,0 +1,42 @@
+<svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Financial chatbot">
+  <defs>
+    <linearGradient id="finbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#062018"/>
+      <stop offset="1" stop-color="#0c4a38"/>
+    </linearGradient>
+    <linearGradient id="finbar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#22c58a" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#4be3ae"/>
+    </linearGradient>
+    <radialGradient id="finglow" cx="0.25" cy="0.25" r="0.8">
+      <stop offset="0" stop-color="#35d0a5" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#35d0a5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#finbg)"/>
+  <rect width="640" height="360" fill="url(#finglow)"/>
+
+  <!-- bar chart -->
+  <g transform="translate(70 70)">
+    <line x1="0" y1="200" x2="360" y2="200" stroke="#1c6b52" stroke-width="2"/>
+    <rect x="10"  y="130" width="44" height="70"  rx="6" fill="url(#finbar)"/>
+    <rect x="74"  y="90"  width="44" height="110" rx="6" fill="url(#finbar)"/>
+    <rect x="138" y="110" width="44" height="90"  rx="6" fill="url(#finbar)"/>
+    <rect x="202" y="50"  width="44" height="150" rx="6" fill="url(#finbar)"/>
+    <rect x="266" y="20"  width="44" height="180" rx="6" fill="url(#finbar)"/>
+    <!-- trend line -->
+    <polyline points="32,120 96,80 160,100 224,45 288,18" fill="none" stroke="#eafff6" stroke-width="3" stroke-linecap="round"/>
+    <g fill="#eafff6"><circle cx="32" cy="120" r="4"/><circle cx="96" cy="80" r="4"/><circle cx="160" cy="100" r="4"/><circle cx="224" cy="45" r="4"/><circle cx="288" cy="18" r="4"/></g>
+  </g>
+
+  <!-- chat bubble -->
+  <g transform="translate(430 90)">
+    <rect x="0" y="0" width="150" height="90" rx="18" fill="#0a3a2c" stroke="#2fae86" stroke-width="1.5"/>
+    <path d="M22 90 l0 26 l26 -26 z" fill="#0a3a2c"/>
+    <text x="20" y="38" fill="#7ff0c8" font-family="monospace" font-size="20" font-weight="700">$ ↗</text>
+    <rect x="20" y="52" width="90" height="8" rx="4" fill="#2fae86" opacity="0.7"/>
+    <rect x="20" y="66" width="60" height="8" rx="4" fill="#2fae86" opacity="0.5"/>
+  </g>
+
+  <text x="40" y="335" fill="#7ff0c8" font-family="-apple-system,Segoe UI,sans-serif" font-size="20" font-weight="700" letter-spacing="1">FINANCIAL CHATBOT · SQL</text>
+</svg>
